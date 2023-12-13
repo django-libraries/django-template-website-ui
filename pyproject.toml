@@ -27,8 +27,7 @@ License = "OSI Approved :: MIT License"
 
 # ==== setuptools ====
 [tool.setuptools.packages.find]
-include_package_data = true
-include = ["website_ui*", "LICENSE", "README.md"]
+include = ["website_ui/**", "LICENSE", "README.md"]
 
 
 # ==== pytest ====

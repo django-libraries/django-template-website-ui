@@ -2,6 +2,6 @@
 # ------------------------------------------------------------------------------
 POSTGRES_HOST=postgres
 POSTGRES_PORT=5432
-POSTGRES_DB=apps
+POSTGRES_DB=django_template_website_ui
 POSTGRES_USER=RpNaabgRjQgjhcHhrJfUKSPOEGEnisvV
 POSTGRES_PASSWORD=1tB5CjYOKABpRD8aaCh2qtSEEmkQt9AdXHoui5fyhppOpkVB9TEAKpNMwIRkzyvZ

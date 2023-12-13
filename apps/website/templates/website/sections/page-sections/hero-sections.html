@@ -7,7 +7,7 @@
 
 {% block header %}
 
-{% include 'includes/navigation_light.html' %}
+{% include 'website/navigation_light.html' %}
 
 {% endblock header %}
 
@@ -297,13 +297,13 @@
   {% endblock content %}
 
   {% block footer %}
-  
-  {% include 'includes/footer_fullscreen.html' %}
-  
+
+  {% include 'website/footer_fullscreen.html' %}
+
   {% endblock footer %}
 
   {% block javascripts %}
-  
+
     <script>
       if (document.getElementById('typed')) {
         var typed = new Typed("#typed", {
@@ -316,6 +316,6 @@
         });
       }
     </script>
-  
-  
+
+
   {% endblock javascripts %}

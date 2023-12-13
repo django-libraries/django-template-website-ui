@@ -27,32 +27,11 @@ jobs:
             echo "::set-output name=valid::false"
           fi
 
-      - name: Update Version
+      - name: Update Version in pyproject.toml
         if: steps.validate.outputs.valid == 'true'
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const fs = require('fs');
-            const toml = require('@iarna/toml');
-            const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
-            try {
-                const releaseData = await octokit.rest.repos.getLatestRelease({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
-                });
-                try {
-                    const file = fs.readFileSync('./pyproject.toml', 'utf8');
-                    let content = toml.parse(file);
-                    content['project']['version'] = releaseData.data.tag_name;
-                    fs.writeFileSync('./pyproject.toml', toml.stringify(content));
-                } catch (err) {
-                    console.error('Error reading or updating pyproject.toml:', err);
-                    throw err;
-                }
-            } catch (err) {
-                console.error('Error fetching latest release:', err);
-                throw err;
-            }
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/}
+          sed -i "s/version = \".*\"/version = \"$VERSION\"/" pyproject.toml
 
       - name: Install Dependencies
         if: steps.validate.outputs.valid == 'true'

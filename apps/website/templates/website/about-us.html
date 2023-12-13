@@ -7,7 +7,7 @@
 
 {% block header %}
 
-{% include 'includes/navigation_transparent.html' %}
+{% include 'website/navigation_transparent.html' %}
 
 {% endblock header %}
 
@@ -366,19 +366,19 @@
   </section>
 
   {% endblock content %}
-  
-  
+
+
   {% block javascrips %}
-  
+
     <script>
       // get the element to animate
       var element = document.getElementById('count-stats');
       var elementHeight = element.clientHeight;
-  
+
       // listen for scroll event and call animate function
-  
+
       document.addEventListener('scroll', animate);
-  
+
       // check if element is in view
       function inView() {
         // get window height
@@ -389,19 +389,19 @@
         var scrollPosition = scrollY + windowHeight;
         // get element position (distance from the top of the page to the bottom of the element)
         var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
-  
+
         // is scroll position greater than element position? (is element in view?)
         if (scrollPosition > elementPosition) {
           return true;
         }
-  
+
         return false;
       }
-  
+
       var animateComplete = true;
       // animate element when it is in view
       function animate() {
-  
+
         // is element in view?
         if (inView()) {
           if (animateComplete) {
@@ -433,7 +433,7 @@
           }
         }
       }
-  
+
       if (document.getElementById('typed')) {
         var typed = new Typed("#typed", {
           stringsElement: '#typed-strings',
@@ -455,6 +455,6 @@
         }, 6);
       }
     </script>
-  
-  
+
+
   {% endblock javascrips %}

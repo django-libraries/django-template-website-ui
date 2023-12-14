@@ -1,0 +1,23 @@
+{% load static i18n compress %}
+
+<div class=" row">
+  {% block social %}
+    {% include 'website/footer/social/base.html' %}
+  {% endblock social %}
+  {% block company %}
+    {% include 'website/footer/company/base.html' %}
+  {% endblock company %}
+  {% block resources %}
+    {% include 'website/footer/resources/base.html' %}
+  {% endblock resources %}
+  {% block help_support %}
+    {% include 'website/footer/help/base.html' %}
+  {% endblock help_support %}
+  {% block legal %}
+    {% include 'website/footer/legal/base.html' %}
+  {% endblock legal %}
+  {% block copyright %}
+    {% include 'website/footer/copyright/base.html' %}
+  {% endblock copyright %}
+  {% include 'website/footer/base.html' %}
+</div>

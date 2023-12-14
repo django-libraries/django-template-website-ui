@@ -1,9 +1,10 @@
 {% load static i18n compress %}
 
-<!-- Navbar Light -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+<!-- Navbar Transparent -->
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
   <div class="container">
-    <a class="navbar-brand" href="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
+    <a class="navbar-brand  text-white " href="/website_ui/static" rel="tooltip" title="Designed and Coded by Creative Tim"
+       data-placement="bottom">
       Soft UI Design System
     </a>
     <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation"
@@ -16,14 +17,15 @@
     </button>
     <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 ms-lg-12 ps-lg-5" id="navigation">
       <ul class="navbar-nav navbar-nav-hover w-100">
-        <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-5">
+        <li class="nav-item dropdown dropdown-hover mx-2 ms-lg-6">
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
-             id="dropdownMenuPages5" data-bs-toggle="dropdown" aria-expanded="false">
+             id="dropdownMenuPages8" data-bs-toggle="dropdown" aria-expanded="false">
             Pages
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
+            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
           </a>
           <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"
-               aria-labelledby="dropdownMenuPages5">
+               aria-labelledby="dropdownMenuPages8">
             <div class="d-none d-lg-block">
               <div
                 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
@@ -51,7 +53,7 @@
                 </div>
                 Landing Pages
               </div>
-              <a href="/" class="dropdown-item border-radius-md">
+              <a href="/website_ui/static" class="dropdown-item border-radius-md">
                 <span class="ps-3">Presentation</span>
               </a>
               <a href="{% url 'about-us' %}" class="dropdown-item border-radius-md">
@@ -117,7 +119,7 @@
                 </div>
                 Landing Pages
               </div>
-              <a href="/" class="dropdown-item border-radius-md">
+              <a href="/website_ui/static" class="dropdown-item border-radius-md">
                 <span class="ps-3">Presentation</span>
               </a>
               <a href="{% url 'about-us' %}" class="dropdown-item border-radius-md">
@@ -162,7 +164,8 @@
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
              id="dropdownMenuBlocks" data-bs-toggle="dropdown" aria-expanded="false">
             Blocks
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
+            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
           </a>
           <ul
             class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
@@ -447,7 +450,8 @@
           <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
              id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
             Docs
-            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1">
+            <img src="{% static 'img/down-arrow-white.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-block d-none">
+            <img src="{% static 'img/down-arrow-dark.svg' %}" alt="down-arrow" class="arrow ms-1 d-lg-none d-block">
           </a>
           <ul class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"
               aria-labelledby="dropdownMenuDocs">
@@ -806,7 +810,7 @@
         </li>
         <li class="nav-item my-auto ms-3 ms-lg-0">
           <a href="https://appseed.us/product/soft-ui-design/django/" target="_blank"
-             class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0">Download</a>
+             class="btn btn-sm  bg-white  btn-round mb-0 me-1 mt-2 mt-md-0">Download</a>
         </li>
       </ul>
     </div>
